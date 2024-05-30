@@ -7,11 +7,10 @@ class FeaturedNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 28.0),
-      
+      padding: const EdgeInsets.symmetric(horizontal: 28.0),
       child: Container(
         height: 300,
-        width: 358,
+        // width: 358,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
         child: Stack(
           children: [

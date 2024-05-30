@@ -18,6 +18,9 @@ class MockNewsRepository implements AbstractNewsRepository {
   Future<List<Article>> getFeaturedArticles() async {
     return _mockArticles;
   }
+
+  // getter methods
+  List<Article> get mockArticles => _mockArticles;
 }
 
 final _mockArticles = [
