@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:era_developers_test_flutter/repositories/news/repository.dart';
+import 'package:era_developers_test_flutter/domain/repositories/news/repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 

@@ -2,8 +2,7 @@
 
 import 'package:era_developers_test_flutter/assets/text_styles.dart';
 import 'package:era_developers_test_flutter/features/UI/pages/full_news_screen/cubit/full_news_screen_cubit.dart';
-import 'package:era_developers_test_flutter/features/common_widgets/news_information.dart';
-import 'package:era_developers_test_flutter/repositories/news/models/article.dart';
+import 'package:era_developers_test_flutter/domain/models/article.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,16 +22,6 @@ class FullNewsScreen extends StatelessWidget {
         child: AppBar(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          // title: BlocSelector<FullNewsScreenCubit, FullNewsScreenState, String?>(
-          //   selector: (state) {
-          //     return state.article?.title;
-          //   },
-          //   builder: (context, state) {
-          //     return state == null ? const SizedBox() :
-          //     Text(state);
-          //   },
-          // ),
-
           backgroundColor: Colors.white,
           elevation: 2,
           flexibleSpace: FlexibleSpaceBar(

@@ -1,4 +1,4 @@
-import 'package:era_developers_test_flutter/repositories/news/models/article.dart';
+import 'package:era_developers_test_flutter/domain/models/article.dart';
 
 abstract class AbstractNewsRepository {
   Future<List<Article>> getLatestArticles();

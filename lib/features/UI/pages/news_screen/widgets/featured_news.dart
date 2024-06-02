@@ -1,6 +1,6 @@
 import 'package:era_developers_test_flutter/assets/text_styles.dart';
 import 'package:era_developers_test_flutter/features/UI/pages/full_news_screen/full_news_screen.dart';
-import 'package:era_developers_test_flutter/repositories/news/models/article.dart';
+import 'package:era_developers_test_flutter/domain/models/article.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedNews extends StatelessWidget {
