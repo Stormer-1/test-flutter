@@ -33,7 +33,8 @@ class _NewsFeedState extends State<NewsFeed> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               gapH20,
+              gapH20,
+
               // latest news
               const Padding(
                 padding: EdgeInsets.only(left: 28.0),
@@ -43,6 +44,7 @@ class _NewsFeedState extends State<NewsFeed> {
                 ),
               ),
               gapH20,
+
               // latest news feed
               BlocBuilder<NewsScreenCubit, NewsScreenState>(
                 builder: (context, state) => switch (state) {
@@ -95,12 +97,16 @@ class _HeaderBody extends StatelessWidget {
       children: [
         const Padding(
           padding: EdgeInsets.only(left: 28.0, top: 42),
+
+          // featured
           child: Text(
             "Featured",
             style: AppTextStyles.text20m,
           ),
         ),
         gapH20,
+
+        // featured news feed
         Expanded(
           child: BlocBuilder<NewsScreenCubit, NewsScreenState>(
             builder: (context, state) => switch (state) {

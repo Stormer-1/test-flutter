@@ -20,8 +20,9 @@ class FullNewsScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size(100, 400),
         child: AppBar(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
           backgroundColor: Colors.white,
           elevation: 2,
           flexibleSpace: FlexibleSpaceBar(
@@ -74,6 +75,8 @@ class FullNewsScreen extends StatelessWidget {
             FullNewsScreenSuccess(
               article: Article? article,
             ) =>
+
+              // news description
               Column(
                 children: [
                   Padding(
@@ -87,6 +90,8 @@ class FullNewsScreen extends StatelessWidget {
                   ),
                 ],
               ),
+
+            // error message
             FullNewsScreenError(errorMessage: String errorMessage) =>
               Text(errorMessage)
           },

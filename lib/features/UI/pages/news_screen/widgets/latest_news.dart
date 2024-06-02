@@ -17,7 +17,6 @@ class LatestNews extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 28.0),
       child: SizedBox(
         height: 103,
-        // width: 356,
         child: Card(
           color: article.read? Colors.white.withOpacity(0.8) : Colors.white,
           shape: RoundedRectangleBorder(
@@ -26,6 +25,8 @@ class LatestNews extends StatelessWidget {
           elevation: 1,
           child: Row(
             children: [
+
+              // article image
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: ClipRRect(
@@ -38,6 +39,8 @@ class LatestNews extends StatelessWidget {
                   ),
                 ),
               ),
+
+              // article tile and publication date
               Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 23),
                 child: SizedBox(
@@ -46,11 +49,15 @@ class LatestNews extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+
+                      // article title
                       Text(
                         article.title,
                         style: AppTextStyles.text16m,
                       ),
                       const SizedBox(height: 11),
+
+                      // publication date
                       Text(
                         article.publicationDate.toString(),
                         style: AppTextStyles.text12r,
