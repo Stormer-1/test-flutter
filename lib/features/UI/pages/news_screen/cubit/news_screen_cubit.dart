@@ -20,7 +20,7 @@ class NewsScreenCubit extends Cubit<NewsScreenState> {
           latestArticles: state.latestArticles,
         ),
       );
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 1));
       final featured = await repository.getFeaturedArticles();
       final latest = await repository.getLatestArticles();
       emit(
