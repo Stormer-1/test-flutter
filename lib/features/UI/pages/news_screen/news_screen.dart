@@ -1,19 +1,19 @@
 import 'package:era_developers_test_flutter/assets/text_styles.dart';
-import 'package:era_developers_test_flutter/features/common%20widgets/featured_news.dart';
-import 'package:era_developers_test_flutter/features/common%20widgets/latest_news.dart';
-import 'package:era_developers_test_flutter/features/common%20widgets/news_feed.dart';
+import 'package:era_developers_test_flutter/features/UI/pages/news_screen/cubit/news_screen_cubit.dart';
+import 'package:era_developers_test_flutter/features/UI/pages/news_screen/widgets/news_feed.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
+
+  static const routeName = '/';
 
   @override
   State<NewsScreen> createState() => _NewsScreenState();
 }
 
 class _NewsScreenState extends State<NewsScreen> {
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _NewsScreenState extends State<NewsScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: TextButton(
-              onPressed: () {},
+              onPressed: context.read<NewsScreenCubit>().markAllAsRead,
               child: const Text(
                 "Mark all read",
                 style: AppTextStyles.text18r,
@@ -46,7 +46,7 @@ class _NewsScreenState extends State<NewsScreen> {
           ),
         ],
       ),
-      body: NewsFeed(),
+      body: const NewsFeed(),
     );
   }
 }

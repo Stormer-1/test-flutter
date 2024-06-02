@@ -48,8 +48,8 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w600,
     fontFamily: fontFamily,
   );
-  static const text28r = TextStyle(
-    fontSize: 24,
+  static const text28s = TextStyle(
+    fontSize: 28,
     fontWeight: FontWeight.w400,
     fontFamily: fontFamily,
     color: Colors.white
