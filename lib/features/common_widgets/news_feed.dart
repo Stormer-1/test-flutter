@@ -3,17 +3,18 @@ import 'package:era_developers_test_flutter/features/common%20widgets/featured_n
 import 'package:era_developers_test_flutter/features/common%20widgets/latest_news.dart';
 import 'package:flutter/material.dart';
 
+final List<String> assetimage = [
+  "assets/images/gadgets.jpeg",
+  "assets/images/code_2.jpeg",
+  "assets/images/iphone.jpeg",
+];
 
 class NewsFeed extends StatelessWidget {
   const NewsFeed({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<String> assetimage = [
-      "assets/images/gadgets.jpeg",
-      "assets/images/code_2.jpeg",
-      "assets/images/iphone.jpeg",
-    ];
+
 
     return ListView(
       // mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -53,9 +54,9 @@ class NewsFeed extends StatelessWidget {
         const SizedBox(height: 20),
 
         // latest news feed
-        ...assetimage.map(
-          (e) => LatestNews(article: ),
-        ),
+        // ...assetimage.map(
+        //   (e) => LatestNews(article: ),
+        // ),
         // Expanded(
         //   child: ListView.builder(
         //     itemCount: 3,
